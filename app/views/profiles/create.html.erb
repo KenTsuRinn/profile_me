@@ -1,0 +1,8 @@
+<h1>Profiles#create</h1>
+<%= form_for @profile, :url=>post_profile_url do |form| %>
+  <%= form.label :name %><%= form.text_field :name, id: :name %>
+  <%= form.label :email %><%= form.text_field :email, id: :email %>
+  <%= form.label :gender %><%= form.text_field :gender, id: :gender %>
+  <%= form.label :age %><%= form.number_field  :age, in: 1..120 %>
+  <%= form.submit %>
+<% end %>
